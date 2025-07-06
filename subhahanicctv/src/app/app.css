@@ -1,0 +1,344 @@
+  /* FULL-PAGE ANIMATED BACKGROUND */
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #1a2a6c, #b21f1f, #fdbb2d, #1a2a6c);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    color: #fff;
+}
+
+/* Background gradient animation */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    flex: 1 0 auto;
+    height: 100vh;
+    animation: fadeIn 1.2s ease-in;
+}
+
+.header {
+    background: linear-gradient(to right, #1c1f26, #343a40);
+    /* Elegant dark gray gradient */
+    color: #f1f1f1;
+    /* Soft white text */
+    padding: 25px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* Optional glowing underline or border for accent */
+.header::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(to right, #00ffc3, #00c3ff);
+    /* neon-blue-green accent */
+    border-radius: 2px;
+    margin-top: 15px;
+}
+
+/* Logo and company name layout */
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    animation: slideInLeft 0.8s ease;
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #ffffff44;
+    animation: zoomIn 0.6s ease;
+}
+
+.company-name {
+    font-size: 28px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Contact info styling */
+.contact-info {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #d1d1d1;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.contact-info a {
+    color: #00ffc3;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-info a:hover {
+    color: #00c3ff;
+}
+
+.header-left {
+    max-width: 65%;
+}
+
+.header-right {
+    text-align: right;
+}
+
+.location {
+    color: #cccccc;
+    font-size: 15px;
+    margin: 0;
+    padding-top: 5px;
+    line-height: 1.4;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* Services Section */
+.services {
+    background: #ffffff;
+    padding: 20px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.services h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    position: relative;
+}
+
+.services h2::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: #00ffc3;
+    display: block;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
+.services ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.services li {
+    font-size: 18px;
+    padding: 12px 0;
+    color: #444;
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: listFade 0.6s forwards;
+}
+
+.services li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.services li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.services li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.services li:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes listFade {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Brand Logos */
+.brands {
+    margin: 3rem 0;
+    text-align: center;
+    animation: fadeIn 1.4s ease;
+}
+
+.brand-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.brand-logos img {
+    height: 50px;
+    filter: grayscale(50%);
+    transition: transform 0.3s ease, filter 0.3s;
+}
+
+.brand-logos img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
+
+/* Address */
+.address {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    color: #eee;
+}
+
+/* Footer */
+footer {
+    background: #1e1e2f;
+    color: #cccccc;
+    text-align: center;
+    padding: 10px 10px;
+    font-size: 14px;
+    border-top: 2px solid #00ffc3;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.overflow-auto {
+    overflow: auto;
+}
